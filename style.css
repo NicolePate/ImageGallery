@@ -1,0 +1,112 @@
+
+body {
+  margin: center;
+}
+
+#span {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.column {
+  flex: 15%;
+  max-width: 25%;
+  padding:  7px;
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+}
+.container {
+  position: relative;
+  width: 100%
+}
+.overlay {
+  position: absolute;
+  margin-top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 98%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+ 
+.surprise{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.surprise:hover {
+  animation: shake 5s ease-in-out infinite;
+  transform-origin: center bottom;
+  transition: padding .3s, bottom .3s;
+  text-align: center;
+}
+
+@keyframes shake {
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+}
+  
+
+@media screen and (max-width: 800px) {
+
+#span {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  
+}
+
+  .column {
+    flex: 50%;
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #span {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    
+  }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
